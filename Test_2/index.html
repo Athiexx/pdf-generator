@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- I have to work on displaying the button-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="module" src="./index.js"></script>
+    <title>Capital Budget Test</title>
+</head>
+
+<body>
+    <div id="dsnyLogo-container" class="dsnyLogo">
+        <img src="./images/New_York_City_Department_of_Sanitation_logo.svg" class="dsnyLogo"
+            alt="New York City Department of Sanitation Logo">
+    </div>
+
+    <div id="header-container">
+        <h1><u>Welcome to the Capital Budget Test Page!</u></h1>
+    </div>
+    <div id="content-container">
+        <p>This is a simple HTML page for testing purposes. This page is to meant to take in information from the user
+            and then generate a PDF from the filled out fields. <b>NOTE: You are required to fill out fields or else you cannot submit the form.</b></p>
+        <p>This page allows you to have the ability to fill out two different forms:</p>
+        <ul>
+            <li>Capital Budget CP Documents</li>
+            <li>Employee Information</li>
+        </ul>
+        <p>In order to choose which form to fill out, select one of the checkboxes below.</p>
+        <p>After you check one of the boxes, you will be prompted to fill out the information from the form you
+            selected.</p>
+    </div>
+    <div id="select-form-container" class="flex-column-container">
+        <h2>Please select a form</h2>
+        <div>
+            <input type="radio" id="cpDocument-form" name="formchoice" value="CP Document">
+            <label for="cpDocument-form">Capital Budget CP Document</label>
+        </div>
+        <div>
+            <input type="radio" id="employeeInfo-form" name="formchoice" value="Employee Information">
+            <label for="employeeInfo-form">Employee Information</label>
+        </div>
+    </div>
+
+    <div id="form-display-container" class="flex-column-container">
+        <h2 id="form-header"></h2>
+        <div id="form-content-area"></div>
+    </div>
+    <div id="submit-button-display-container" class="is-hidden">
+        <div id="submit-button-content-area" class="flex-column-container">
+        </div>
+    </div>
+    <div id="form-output-container">
+        <iframe id="pdf-iframe" class="is-hidden"></iframe>
+    </div>
+</body>
+
+</html>

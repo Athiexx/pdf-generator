@@ -1,0 +1,64 @@
+.h1{
+    color: rgb(2, 47, 75);
+    text-decoration: underline;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+
+    display:block;
+    width:fit-content;
+    padding: 0.35em 0.7em;
+    text-align: center;
+    margin: 0 auto;
+
+    
+    border: 1px solid black;
+    border-style: dashed;
+    background-color: rgb(200, 235, 245);
+}
+
+.h2{
+    color: rgb(1, 131, 92);
+    text-decoration: underline;
+    font-weight: lighter;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width:fit-content;
+}
+
+.h3{
+    color: rgb(168, 196, 136);
+    font-weight:normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:fit-content;
+}
+
+.p{
+    color:rgb(2, 58, 53);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* centers content both vertically and horizontally. This is for class "p", but it can be used for other things */
+.center-wrap {
+  height: fit-content;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+
+    width:fit-content;
+    padding: 0.35em 0.7em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.grow-shadow {
+    display:block;
+    box-shadow: black 2px 2px 5px;
+    transform: scale(1.2); /* Makes text 20% bigger */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+input::placeholder{
+    color:rgb(104, 104, 104);
+    font-size:smaller;
+    font-weight:lighter;    
+    font-family: 'Courier New', Courier, monospace;
+}

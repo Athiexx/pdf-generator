@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Document Form</title>
+</head>
+
+<body>
+    <form id="cpDocument-form-display-container" class="is-hidden">
+        <label for="cpDocument-cpNumber">CP Number</label>
+        <!-- Updated name to match id -->
+        <input type="text" id="cpDocument-cpNumber" name="cpDocument-cpNumber" placeholder="Enter in Project ID..." required>
+
+        <label for="cpDocument-cpDollarAmount">CP Dollar Amount ($)</label>
+        <input type="text" id="cpDocument-cpDollarAmount" name="cpDocument-cpDollarAmount" inputmode="decimal"
+            pattern="^[1-9]\d*(\.\d{2})?$" title="Please enter a number starting with 1-9 (e.g., 100 or 100.50)"
+            placeholder="Enter in CP Dollar Amt..." required>
+        <span id="cpDocument-id-error-dollarAmount" style="color:red; display:none;">Please enter numbers only. You can
+            only enter in one decimal.</span>
+
+        <label for="cpDocument-fiscalYear">Fiscal Year</label>
+        <select id="cpDocument-fiscalYear" name="cpDocument-fiscalYear" required></select>
+
+        <label for="cpDocument-RequestedDate">CP Requested Date</label>
+        <input type="date" id="cpDocument-RequestedDate" name="cpDocument-RequestedDate" title="e.g., 01/15/2010" required>
+
+        <label for="cpDocument-ApprovalDate">CP Approval Date</label>
+        <input type="date" id="cpDocument-ApprovalDate" name="cpDocument-ApprovalDate" title="e.g., 02/05/2010">
+
+        <label for="cpDocument-fund">Fund</label>
+        <select id="cpDocument-fund" name="cpDocument-fund">
+            <option value="N/A">N/A</option>
+            <option value="400">400</option>
+            <option value="001">001</option>
+        </select>
+
+        <label for="cpDocument-departmentCode">Department Code</label>
+        <select id="cpDocument-departmentCode" name="cpDocument-departmentCode">
+            <option value="N/A">N/A</option>
+            <option value="DSNY">827 (DSNY)</option>
+            <option value="DDC">856 (DDC)</option>
+            <option value="DCAS">850 (DCAS)</option>
+        </select>
+
+        <label for="cpDocument-UA">Unit of Appropriation</label>
+        <input type="text" id="cpDocument-UA" name="cpDocument-UA" inputmode="numeric" pattern="\d{3}" maxlength="3"
+            title="e.g., 012 (3-Digit Code)" placeholder="Enter in UA Code..." required>
+        <span id="cpDocument-id-error-UA" style="color:red; display:none;">Please enter a numeric value only</span>
+
+        <label for="cpDocument-budgetCode">Budget Code</label>
+        <input type="text" id="cpDocument-budgetCode" name="cpDocument-budgetCode" title="e.g., 901G/F12F/HURE, etc."
+            placeholder="Enter in Budget Code..." required>
+
+        <label for="cpDocument-objectCode">Object Code</label>
+        <input type="text" id="cpDocument-objectCode" name="cpDocument-objectCode" title="e.g., 2110/2111/213D, etc."
+            placeholder="Enter in Object Code..." required>
+
+        <label for="cpDocument-supersedeCPBy">Supersede CP By</label>
+        <input type="date" id="cpDocument-supersedeCPBy" name="cpDocument-supersedeCPBy">
+
+        <label for="cpDocument-supersedeCPDate">Supersede CP Date</label>
+        <input type="date" id="cpDocument-supersedeCPDate" name="cpDocument-supersedeCPDate">
+    </form>
+</body>
+</html>

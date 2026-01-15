@@ -1,0 +1,109 @@
+/* Utility to keep anything hidden in the site */
+.is-hidden {
+    display: none !important;
+}
+
+/* Column container*/
+.flex-column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*DSNY Logo class*/
+
+.dsnyLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: auto;
+}
+
+/* Header 1 class*/
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: green;
+
+}
+
+/* Form Container class. Uses an ID.*/
+#select-form-container {
+    margin-bottom: 0.5rem;
+}
+
+#select-form-container input[type="radio"] {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#select-form-container label {
+    margin-top: 1rem;
+}
+
+/* CP Document Form Container Class. Uses an ID.*/
+#cpDocument-form-display-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+#cpDocument-form-display-container label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#cpDocument-form-display-container input {
+    color: rgb(48, 48, 48);
+    font-family: monospace;
+    font-weight: lighter;
+    width: 10%;
+}
+
+#cpDocument-form-display-container input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Employee Information Form Container Class. Uses an ID.*/
+#employeeInfo-form-display-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+#employeeInfo-form-display-container label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#employeeInfo-form-display-container input,
+select {
+    color: rgb(48, 48, 48);
+    font-family: monospace;
+    font-weight: lighter;
+    width: 10%;
+}
+
+#employeeInfo-form-display-container input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* OTHER */
+#pdf-iframe {
+    width: 100%;
+    height: 800px;
+    /* Adjust height to fit your form */
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+button {
+    width: fit-content;
+    margin-top: -3rem;
+
+}
+
+iframe {
+    width: 50%;
+    height: 600px;
+}

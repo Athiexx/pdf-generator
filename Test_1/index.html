@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./src/index.js"></script>
+  <link rel="stylesheet" href="./css_styles/styles.css">
+  <title>PDF-Lib Javascript example</title>
+</head>
+
+<body>
+  <div id="website-header-container" class="center-wrap">
+    <h1 class="h1">PDF-Lib Javascript Example</h1><br></br>
+    <div class="p">
+      <p>This page serves as an example of how the "PDF-lib" framework can be used to dynamically create PDF
+        documents in Javscript.</p>
+      <p>Here, as an example, we are asking a DSNY Employee to fill out a form where they can submit basic information
+        about themselves based on their occupation.</p>
+    </div><br></br>
+  </div>
+
+  <div id="employee-form-header-container">
+    <h2 id="h2" class="h2" type="mouseover">DSNY Employee Form</h2>
+    <h3 class="h3">After submitting this form, you will see a PDF below.</h3>
+  </div>
+
+  <!-- User data for submitting a PDF -->
+  <div id="form-container">
+    <form id="employee-form">
+
+      <!--Input fields for user data (first name, last name, email, title, bureau, location)-->
+      <label for="firstname">First Name:</label><br>
+      <input type="text" id="firstname" name="firstname" autocomplete="given-name"
+        placeholder="Enter your first name..."><br><br>
+
+      <label for="lastname">Last Name:</label><br>
+      <input type="text" id="lastname" name="lastname" autocomplete="family-name"
+        placeholder="Enter your last name..."><br><br>
+
+      <label for="email">DSNY Email:</label><br>
+      <input type="text" id="email" name="email" autocomplete="email" placeholder="Enter your email..."><br><br>
+
+      <label for="title">Work Title:</label><br>
+      <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Enter your occupation..."><br><br>
+
+      <label for="bureau">Bureau:</label><br>
+      <input type="text" id="bureau" name="bureau" placeholder="Enter your bureau..."><br><br>
+
+      <label for="location">Work Location:</label><br>
+      <input type="text" id="location" name="location" autocomplete="street-address"
+        placeholder="Enter your location..."><br><br>
+
+      <!-- Generate a PDF after an employee fills out a form-->
+      <button type="submit" value="Submit">Submit</button>
+    </form>
+  </div>
+  <br></br>
+  <div id="employee-form-output-container">
+    <iframe id="pdf-iframe" width="50%" height="600px"></iframe>
+  </div>
+
+</body>
+</html>
