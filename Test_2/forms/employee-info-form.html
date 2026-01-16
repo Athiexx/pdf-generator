@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Info Form</title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Employee Info Form</title>
 </head>
 
 <body>
-    <form id="employeeInfo-form-display-container" class="is-hidden">
-        
-        <label for="employeeInfo-firstname">First Name</label>
-        <input type="text" id="employeeInfo-firstname" name="employeeInfo-firstname" 
-               autocomplete="given-name" placeholder="Enter first name..." required>
+       <form id="employeeInfo-form-display-container" class="is-hidden">
 
-        <label for="employeeInfo-lastname">Last Name</label>
-        <input type="text" id="employeeInfo-lastname" name="employeeInfo-lastname" 
-               autocomplete="family-name" placeholder="Enter last name..." required>
+              <label for="employeeInfo-firstname">First Name</label>
+              <input type="text" id="employeeInfo-firstname" name="employeeInfo-firstname" autocomplete="given-name"
+                     placeholder="Enter first name...">
 
-        <label for="employeeInfo-ID">Employee ID</label>
-        <input type="text" id="employeeInfo-ID" name="employeeInfo-ID" 
-               inputmode="numeric" pattern="\d{7}" maxlength="7" 
-               title="7-digit employee ID" placeholder="Enter employee ID..." required>
-        
-        <span id="employeeInfo-id-error" style="color: red; display:none;">
-            Please enter numbers only. Your input must be a 7-digit number.
-        </span>
+              <label for="employeeInfo-lastname">Last Name</label>
+              <input type="text" id="employeeInfo-lastname" name="employeeInfo-lastname" autocomplete="family-name"
+                     placeholder="Enter last name...">
 
-        <label for="employeeInfo-email">Work Email Address</label>
-        <input type="email" id="employeeInfo-email" name="employeeInfo-email" 
-               autocomplete="email" title="workemail@dsny.nyc.gov" placeholder="Enter work email..." required>
+              <label for="employeeInfo-ID">Employee ID</label>
+              <input type="text" id="employeeInfo-ID" name="employeeInfo-ID" inputmode="numeric" pattern="\d{7}"
+                     maxlength="7" title="7-digit employee ID" placeholder="Enter employee ID...">
 
-        <label for="employeeInfo-bureau">Bureau</label>
-        <input type="text" id="employeeInfo-bureau" name="employeeInfo-bureau" 
-               autocomplete="organization-title" title="e.g., Bureau of Information Technology (BIT)" 
-               placeholder="Enter bureau..." required>
+              <span id="employeeInfo-id-error" style="color: red; display:none;">
+                     Please enter numbers only. Your input must be a 7-digit number.
+              </span>
 
-        <label for="employeeInfo-position">Work Title</label>
-        <input type="text" id="employeeInfo-position" name="employeeInfo-position" 
-               placeholder="Enter in work title..." required>
+              <label for="employeeInfo-email">Work Email Address</label>
+              <input type="email" id="employeeInfo-email" name="employeeInfo-email" autocomplete="email"
+                     title="workemail@dsny.nyc.gov" placeholder="Enter work email...">
 
-        <label for="employeeInfo-location">Work Location</label>
-        <input type="text" id="employeeInfo-location" name="employeeInfo-location" 
-               placeholder="Enter in work location..." required>
-    </form>
+              <label for="employeeInfo-bureau">Bureau</label>
+              <input type="text" id="employeeInfo-bureau" name="employeeInfo-bureau" autocomplete="organization-title"
+                     title="e.g., Bureau of Information Technology (BIT)" placeholder="Enter bureau...">
+
+              <label for="employeeInfo-position">Work Title</label>
+              <input type="text" id="employeeInfo-position" name="employeeInfo-position"
+                     placeholder="Enter in work title...">
+
+              <label for="employeeInfo-location">Work Location</label>
+              <input type="text" id="employeeInfo-location" name="employeeInfo-location"
+                     placeholder="Enter in work location...">
+       </form>
 </body>
+
 </html>

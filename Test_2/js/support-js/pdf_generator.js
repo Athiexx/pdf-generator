@@ -101,4 +101,7 @@ export async function generatePDF(formObject, formId) {
         window.open(blobUrl, '_blank');
         console.warn('Iframe not found; opened PDF in new tab.');
     }
+
+    // return the blob so submit_handler.js is able to retrieve it and upload it to Alfresco
+    return blob;
 }
