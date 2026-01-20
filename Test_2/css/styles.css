@@ -88,6 +88,30 @@ select {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* PDF TEMPLATE FORM */
+
+#pdfTemplate-form-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+#pdfTemplate-form-container label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#pdfTemplate-form-container input {
+    color: rgb(48, 48, 48);
+    font-family: monospace;
+    font-weight: lighter;
+    width: 10%;
+}
+
+#pdfTemplate-form-container input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* OTHER */
 #pdf-iframe {
     width: 100%;

@@ -9,10 +9,49 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./jquery/jquery-3.7.1.min.js"></script>
     <script type="module" src="./index.js"></script>
-    <title>Capital Budget Test</title>
+    <script>
+        const $ = window.jQuery;
+        var ticket = "";
+
+        function authenticate() {
+            const existingTicket = sessionStorage.getItem("alfrescoTicket");
+            if (existingTicket) {
+                console.log("Using existing authentication ticket:", existingTicket);
+                return existingTicket; // already have a ticket
+            }
+            const authData = {
+                "userId": "admin",
+                "password": "rep0master"
+            }
+
+            $.ajax({
+                url: "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/authentication/versions/1/tickets",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(authData),
+                success: function (response) {
+                    ticket = response.entry.id;
+                    console.log("Authentication ticket:", ticket);
+                    // store it as a session so we can authenticate next time
+                    sessionStorage.setItem("alfrescoTicket", ticket);
+                    console.log("New ticket stored retrieved and stored in sessionStorage.");
+                },
+                // xhr contains the actual response from the server
+                error: function (xhr, status, error) {
+                    console.error("Error status:", status);
+                    console.error("Error code:", xhr.status);
+                    console.error("Authentication failed:", error);
+                    console.error("Response:", xhr.responseText);
+                    console.error("Server Headers:", xhr.getAllResponseHeaders());
+                }
+            });
+            return ticket;
+        }
+    </script>
+    <title>Capital Budget Test Page</title>
 </head>
 
-<body>
+<body onload="authenticate()">
     <div id="dsnyLogo-container" class="dsnyLogo">
         <img src="./images/New_York_City_Department_of_Sanitation_logo.svg" class="dsnyLogo"
             alt="New York City Department of Sanitation Logo">
@@ -23,7 +62,8 @@
     </div>
     <div id="content-container">
         <p>This is a simple HTML page for testing purposes. This page is to meant to take in information from the user
-            and then generate a PDF from the filled out fields. <b>NOTE: You are required to fill out fields or else you cannot submit the form.</b></p>
+            and then generate a PDF from the filled out fields. <b>NOTE: You are required to fill out fields or else you
+                cannot submit the form.</b></p>
         <p>This page allows you to have the ability to fill out two different forms:</p>
         <ul>
             <li>Capital Budget CP Documents</li>

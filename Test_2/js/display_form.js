@@ -1,7 +1,6 @@
-import { populateFiscalYears } from "./support-js/append_fiscalyear.js";
-import { setupUAValidation } from "./support-js/validation.js";
-import { setupDollarAmountValidation } from "./support-js/validation.js";
-import { setupEmployeeIdValidation } from "./support-js/validation.js";
+import * as CPDocValidation from "./support-js/cp-document-validation.js";
+import * as EmployeeInfoDocValidation from "./support-js/employee-info-validation.js";
+import * as PDFTemplateValidation from "./support-js/pdf-template-validation.js";
 
 // display_form.js - Dynamically loads form snippets via Fetch API
 export async function displayForm(selectedForm) {
@@ -31,7 +30,8 @@ export async function displayForm(selectedForm) {
     // 1. Map selection to file paths. These files contain the employee and cp document forms
     const formPaths = {
         'CP Document': 'forms/cp-document-form.html',
-        'Employee Information': 'forms/employee-info-form.html'
+        'Employee Information': 'forms/employee-info-form.html',
+        'PDF Template': 'forms/pdf-template-form.html'
     };
 
     const targetPath = formPaths[selectedForm];
@@ -53,13 +53,17 @@ export async function displayForm(selectedForm) {
             contentArea.innerHTML = htmlContent;
 
             if (selectedForm === 'CP Document') {
-                populateFiscalYears();
-                setupUAValidation();
-                setupDollarAmountValidation();
+                CPDocValidation.populateFiscalYears();
+                CPDocValidation.setupUAValidation();
+                CPDocValidation.setupDollarAmountValidation();
             }
 
             if (selectedForm === 'Employee Information') {
-                setupEmployeeIdValidation();
+                EmployeeInfoDocValidation.setupEmployeeIdValidation();
+            }
+
+            if(selectedForm === 'PDF Template'){
+                PDFTemplateValidation.setupInputValidation();
             }
 
             // 5. Remove 'is-hidden' from the newly injected form and focus

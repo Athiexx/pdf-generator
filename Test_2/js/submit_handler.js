@@ -1,5 +1,4 @@
 import { generatePDF } from "./support-js/pdf_generator.js";
-import { authenticate } from "./support-js/authenication.js";
 
 export async function submit_handler() {
     // We grab whatever form is currently injected in the DOM
@@ -18,16 +17,6 @@ export async function submit_handler() {
         const formData = new FormData(event.target);
         const formObject = Object.fromEntries(formData.entries());
 
-        try {
-            // 1. Authenticate and get ticket
-            const ticket = await authenticate();
-
-            if (!ticket) {
-                // If throw is called, execution jumps to the catch block
-                document.getElementById("error-form-output-container").innerHTML = "<p style='color: red;'>Cannot retrieve ticket. Will not generate form. Please try again later.</p>";
-                console.error("Authentication ticket is missing. Cannot proceed.");
-                return;
-            }
 
             // 2. Generate PDF
             const pdfBlob = await generatePDF(formObject, activeFormId);
@@ -43,10 +32,9 @@ export async function submit_handler() {
 
             // 4. AJAX Upload
             $.ajax({
-                url: "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/alfresco/versions/1/nodes/171d611c-3229-4c81-9a8a-6570602f4923/children",
+                url: "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/alfresco/versions/1/nodes/171d611c-3229-4c81-9a8a-6570602f4923/children?alf_ticket=" + ticket,
                 type: "POST",
                 headers: {
-                    "Authorization": "Basic " + btoa(ticket + ":"),
                     "Accept": "application/json",
                     "Cache-Control": "no-cache"
                 },
@@ -66,10 +54,7 @@ export async function submit_handler() {
                 }
             });
 
-        } catch (error) {
-            console.error("Process failed:", error.message);
-        }
-    });
-}
+        });
 
+    }
 

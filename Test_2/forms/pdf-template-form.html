@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Template Form</title>
+  </head>
+  <!-- Form will contain: company name, order no, order date, total due, and item description-->
+
+  <body>
+    <form id="pdfTemplate-form-container" class="is-hidden">
+      <label for="pdfTemplate-companyname">Company Name</label>
+      <input type="text" id="pdfTemplate-companyname" name="pdfTemplate-companyname" placeholder="Enter company name...">
+
+      <label for="pdfTemplate-ordernumber">Order Number</label>
+      <input type="text" id="pdfTemplate-ordernumber" inputmode="numeric" pattern="[0-9]*" placeholder="Enter order number...">
+      <span id="pdfTemplate-error-ordernumber" style="color:red; display:none;">Please enter numbers only. No non-numeric values allowed.</span>
+
+      <label for="pdfTemplate-orderdate">Order Date</label>
+      <input type="date" id="pdfTemplate-orderdate" name="pdfTemplate-orderdate">
+
+      <label for="pdfTemplate-totaldue">Total Due</label>
+      <input type="text" id="pdfTemplate-totaldue" name="pdfTemplate-totaldue" placeholder="Enter the total order amount...">
+      <span id="pdfTemplate-error-totaldue" style="color:red;display:none;">Please enter numbers only. No non-numeric values are allowed.</span>
+
+      <label for="pdfTemplate-itemdescription">Item description</label>
+      <input type="text" id="pdfTemplate-itemdescription" name="pdfTemplate-itemdescription" placeholder="Enter item description...">
+    </form>
+  </body>
+</html>
