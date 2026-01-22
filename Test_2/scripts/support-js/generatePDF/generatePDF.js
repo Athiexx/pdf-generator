@@ -1,5 +1,5 @@
 import { PDFDocument, StandardFonts } from 'https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.esm.min.js';
-import { drawPDF } from './draw_pdf';
+import { drawPDF } from './drawPDF.js';
 
 export async function generatePDF(formObject, formId) {
     let pdfDoc;

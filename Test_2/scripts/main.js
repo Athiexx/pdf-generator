@@ -1,6 +1,5 @@
-import { displayButton } from './display_button.js';
-import { displayForm } from './display_form.js';
-import { submit_handler } from './submit_handler.js';
+import * as AppJS from './app-js/index.js';
+
 
 export function init() {
     const formContainer = document.getElementById('select-form-container');
@@ -11,13 +10,13 @@ export function init() {
         if (formPath === 'formchoice') {
             let formPathTarget = event.target.value;
             try {
-                // ADD AWAIT HERE
-                await displayForm(formPathTarget); 
+                // Display the form
+                await AppJS.displayForm(formPathTarget); 
+                // show submit button after form is displayed
+                AppJS.displayButton();
                 
-                displayButton();
-                
-                // Now the form is definitely in the DOM, so we can attach the handler
-                submit_handler();
+                // Submit form logic
+                AppJS.submitHandler();
             } catch (error) {
                 console.error("Form switch failed:", error);
             }

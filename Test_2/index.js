@@ -1,4 +1,4 @@
-import { init } from './js/main.js';
+import { init } from './scripts/main.js';
 
 // This starts the code once the HTML is loaded
 document.addEventListener('DOMContentLoaded', () => {

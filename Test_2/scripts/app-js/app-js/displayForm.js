@@ -1,6 +1,4 @@
-import * as CPDocValidation from "./support-js/cp-document-validation.js";
-import * as EmployeeInfoDocValidation from "./support-js/employee-info-validation.js";
-import * as PDFTemplateValidation from "./support-js/pdf-template-validation.js";
+import { CPDocValidation, EmployeeInfoDocValidation, PDFTemplateValidation } from "../../support-js/index.js";
 
 // display_form.js - Dynamically loads form snippets via Fetch API
 export async function displayForm(selectedForm) {

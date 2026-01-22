@@ -1,6 +1,6 @@
-import { generatePDF } from "./support-js/pdf_generator.js";
+import { generatePDF } from "../../support-js/generatePDF/generatePDF.js";
 
-export async function submit_handler() {
+export async function submitHandler() {
     // We grab whatever form is currently injected in the DOM
     const formElement = document.querySelector('#form-content-area form');
 
