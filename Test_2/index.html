@@ -8,46 +8,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./jquery/jquery-3.7.1.min.js"></script>
-    <script type="module" src="./index.js"></script>
     <script>
-        const $ = window.jQuery;
-        var ticket = "";
+        window.ticket = "";
 
-        function authenticate() {
-            const existingTicket = sessionStorage.getItem("alfrescoTicket");
-            if (existingTicket) {
-                console.log("Using existing authentication ticket:", existingTicket);
-                return existingTicket; // already have a ticket
-            }
-            const authData = {
-                "userId": "admin",
-                "password": "rep0master"
-            }
+        window.authenticate = function () {
+            return new Promise((resolve, reject) => {
+                const uploadUrl = "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/authentication/versions/1/tickets";
+                const existingTicket = sessionStorage.getItem("alfrescoTicket");
 
-            $.ajax({
-                url: "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/authentication/versions/1/tickets",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(authData),
-                success: function (response) {
-                    ticket = response.entry.id;
-                    console.log("Authentication ticket:", ticket);
-                    // store it as a session so we can authenticate next time
-                    sessionStorage.setItem("alfrescoTicket", ticket);
-                    console.log("New ticket stored retrieved and stored in sessionStorage.");
-                },
-                // xhr contains the actual response from the server
-                error: function (xhr, status, error) {
-                    console.error("Error status:", status);
-                    console.error("Error code:", xhr.status);
-                    console.error("Authentication failed:", error);
-                    console.error("Response:", xhr.responseText);
-                    console.error("Server Headers:", xhr.getAllResponseHeaders());
+                if (existingTicket) {
+                    window.ticket = existingTicket;
+                    console.log("Ticket:", window.ticket);
+                    console.log("Using existing ticket from session.");
+                    return resolve(existingTicket);
                 }
+                // user id and password to be authenticated 
+                const authData = {
+                    "userId": "admin",
+                    "password": "rep0master"
+                };
+
+                // using jquery to authenticate + upload the thing to alfresco
+                $.ajax({
+                    url: uploadUrl,
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(authData),
+                    success: function (response) {
+                        // Accessing the specific Alfresco V1 response path
+                        window.ticket = response.entry.id;
+                        sessionStorage.setItem("alfrescoTicket", window.ticket);
+                        console.log("Ticket:", window.ticket);
+                        resolve(window.ticket);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error status from server:", xhr.status);
+                        console.error("Status text:", xhr.statusText)
+                        console.error("Auth failed:", xhr.responseText);
+                        console.error("XHR Object:", xhr);
+                        reject(xhr);
+                    }
+                });
             });
-            return ticket;
-        }
+        };
     </script>
+    <script type="module" src="./index.js"></script>
     <title>Capital Budget Test Page</title>
 </head>
 
@@ -62,12 +67,12 @@
     </div>
     <div id="content-container">
         <p>This is a simple HTML page for testing purposes. This page is to meant to take in information from the user
-            and then generate a PDF from the filled out fields. <b>NOTE: You are required to fill out fields or else you
-                cannot submit the form.</b></p>
-        <p>This page allows you to have the ability to fill out two different forms:</p>
+            and then generate a PDF from the filled out fields.</p>
+        <p>This page allows you to have the ability to fill out three different forms:</p>
         <ul>
             <li>Capital Budget CP Documents</li>
             <li>Employee Information</li>
+            <li>PDF Template Form</li>
         </ul>
         <p>In order to choose which form to fill out, select one of the checkboxes below.</p>
         <p>After you check one of the boxes, you will be prompted to fill out the information from the form you
@@ -88,7 +93,7 @@
             <label for="pdfTemplate-form">PDF Template Form</label>
         </div>
     </div>
-
+    <div id="ticket-error-container"></div>
     <div id="form-display-container" class="flex-column-container">
         <h2 id="form-header"></h2>
         <div id="form-content-area"></div>
@@ -102,5 +107,4 @@
     </div>
     <div id="error-form-output-container"></div>
 </body>
-
 </html>

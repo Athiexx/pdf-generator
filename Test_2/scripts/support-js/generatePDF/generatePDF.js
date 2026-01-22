@@ -51,9 +51,9 @@ export async function generatePDF(formObject, formId) {
         }
         drawPDF(page, fields, headerText, fonts);
 
-    } else if (formID === 'pdfTemplate-form-container') {
-        const templateUrl = '../../forms/Simple_Order_Form_Template.pdf';
-        const templateBytes = await fetch(templateUrl).then(res => arrayBuffer());
+    } else if (formId === 'pdfTemplate-form-container') {
+        const templateUrl = './forms/Simple_Order_Form_Template.pdf';
+        const templateBytes = await fetch(templateUrl).then(res => res.arrayBuffer());
 
         pdfDoc = await PDFDocument.load(templateBytes);
         const form = pdfDoc.getForm();
