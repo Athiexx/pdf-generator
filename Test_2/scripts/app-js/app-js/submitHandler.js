@@ -24,7 +24,6 @@ export async function submitHandler() {
         // 3. Prepare Upload Data
         const uploadData = new FormData();
         const uniqueName = `${activeFormId}.pdf`;
-        const nodeID = "171d611c-3229-4c81-9a8a-6570602f4923";
 
         uploadData.append("name", uniqueName);
         uploadData.append("filedata", pdfBlob, uniqueName);
@@ -32,9 +31,9 @@ export async function submitHandler() {
         uploadData.append("overwrite", "true");
 
         // 4. AJAX Upload
-        await new Promise((resolve, reject) => {
+        const uploadedNodeId = await new Promise((resolve, reject) => {
             $.ajax({
-                url: `https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/alfresco/versions/1/nodes/${nodeID}/children?alf_ticket=${ticket}`,
+                url: "https://ecm-dev.dsnyad.nycnet/alfresco/api/-default-/public/alfresco/versions/1/nodes/171d611c-3229-4c81-9a8a-6570602f4923/children?alf_ticket=" + ticket,
                 type: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -46,7 +45,9 @@ export async function submitHandler() {
                 success: function (response) {
                     console.log("PDF uploaded successfully:", response);
                     console.log(`Successfully generated and stored PDF for: ${activeFormId}`);
-                    resolve(response); // Notifies 'await' that the request is finished
+                    // extracting the new id from the file we just uploaded
+                    const newNodeId = response.entry.id;
+                    resolve(newNodeId); // Notifies 'await' that the request is finished
                 },
                 error: function (xhr, status, error) {
                     console.error("Upload to Alfresco failed:", error);
@@ -60,7 +61,7 @@ export async function submitHandler() {
         });
         // FIX THIS ERROR. IT HAS SOME WEIRD ERR_NAME_NOT_RESOLVED ERROR.
         // CHECK THE URL. IT MAY BE WRONG OR SOMETHING.
-        await updateAlfrescoMetadata(formObject, nodeID);
+            await updateAlfrescoMetadata(formObject, uploadedNodeId);
     });
 }
 
