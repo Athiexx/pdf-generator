@@ -1,0 +1,364 @@
+---
+FieldType: Text
+FieldName: PRESENT TITLE  LEVEL TITLE CODE NUMBER PRESENT SALARY
+FieldNameAlt: PRESENT TITLE / LEVEL TITLE CODE NUMBER PRESENT SALARY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: REASON D LEAVE WITHOUT PAY
+FieldNameAlt: REASON D LEAVE WITHOUT PAY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: FROM TO
+FieldNameAlt: FROM TO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: INDICATE FUNDING SOURCE TAX LEVY IFA CD OTHER REMARKS
+FieldNameAlt: INDICATE FUNDING SOURCE: TAX LEVY IFA CD OTHER REMARKS:
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: BUREAU HEAD OR DESIGNEE
+FieldNameAlt: BUREAU HEAD OR DESIGNEE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: DATE
+FieldNameAlt: DATE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: EXPLANATION
+FieldNameAlt: EXPLANATION
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: AMOUNT INCREASE TO PAYASYOUGO Q YES D NO
+FieldNameAlt: AMOUNT INCREASE TO PAY-AS-YOU-GO? Q YES D NO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: APPOINTMENT DATE WORK LOCATION PAYROLL DIST NO
+FieldNameAlt: APPOINTMENT DATE WORK LOCATION PAYROLL DIST. NO.
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: BUDGET CODE  LINE NUMBER
+FieldNameAlt: BUDGET CODE &amp; LINE NUMBER
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: DIRECTOR OF PERSONNEL OR DESIGNEE
+FieldNameAlt: DIRECTOR OF PERSONNEL OR DESIGNEE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: DATE_2
+FieldNameAlt: DATE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text1
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text2
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text3
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text4
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text5
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text6
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text7
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text8
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text9
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text10
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text11
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text12
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box13
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box14
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box15
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box16
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box17
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text18
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text19
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box20
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box21
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text22
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box23
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box24
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box25
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box26
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box27
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text28
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text29
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text30
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box31
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text32
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box33
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box34
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box35
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box36
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box37
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box38
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box39
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text40
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text41
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text42
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text43
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text44
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text45
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text46
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text47
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text48
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text13
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box18
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
