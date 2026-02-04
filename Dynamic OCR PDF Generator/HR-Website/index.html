@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- ticket isn't working... I want to be able to import authenticate onload without writing the script here. for simplicity sake.
+ 
+maybe I have to use index.js and load the authenticate file there?
+maybe.-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./images/icons8-favicon-50.png">
+    <script type="module" src="index.js">
+    </script>
     <title>Human Resources Website</title>
 </head>
+
 <body>
-    <h1>Welcome to the Human Resources Website</h1>
-    
+    <div id="dsnyLogo-container" class="dsnyLogo">
+        <img src="./images/New_York_City_Department_of_Sanitation_logo.svg"
+            alt="New York City Department of Sanitation Logo">
+    </div>
+
+    <h1>Welcome to the Human Resources Website!</h1>
+    <p>This website is for the DS-46 form.</p>
+
+    <div id="form-container">
+        <iframe src="./forms/DS 46 New.pdf" width="100%" height="500px"></iframe>
+    </div>
+
+    <div id="button-container">
+        <button>Submit</button>
+    </div>
 </body>
+
 </html>
