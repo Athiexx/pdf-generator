@@ -1,0 +1,47 @@
+.horizontal-section {
+  display: grid;
+  /* Creates 4 equal columns. Adjust '4' to change how many fields per row */
+  grid-template-columns: repeat(3, 300px); 
+  gap: 25px 15px; /* Adds vertical and horizontal spacing between fields */
+  align-items: end; /* Aligns shorter items to the bottom of the grid cell */
+}
+
+/* Each wrapper div containing one label and one input */
+.horizontal-section > div {
+  display: flex;
+  flex-direction: column; /* Labels appear on top of inputs */
+  gap: 5px; /* Space between the label and its input */
+}
+.padding-class {
+    margin-bottom: 1.25rem;
+    margin-top:1.5rem;
+}
+
+/* Hide certain fields unless a certain radio button is pressed */
+.is-hidden {
+    display: none !important;
+}
+
+input[type="text"] {
+  color: rgb(48, 48, 48);
+  font-weight: lighter;
+  field-sizing:content;
+  min-width: 100px;      /* Keeps the box from disappearing when empty */
+  max-width: 200px;  
+  box-sizing:border-box;  /* Prevents the box from becoming too wide */
+
+}
+
+input[type="date"] {
+  field-sizing:content;
+  min-width: 100px;      /* Keeps the box from disappearing when empty */
+  max-width: 200px;  
+  box-sizing:border-box;  /* Prevents the box from becoming too wide */
+
+}
+
+fieldset{
+    max-width:800px;
+
+    padding: 20px;
+}
