@@ -1,364 +1,400 @@
 ---
 FieldType: Text
-FieldName: PRESENT TITLE  LEVEL TITLE CODE NUMBER PRESENT SALARY
+FieldName: Text Box - BUREAU
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - DIVISION
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - CONTROL NUMBER
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - LAST NAME
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - FIRST NAME
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - MIDDLE INITIAL
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - REFERENCE NUMBER
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - ADDRESS
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - PRESENT TITLE/LEVEL
 FieldNameAlt: PRESENT TITLE / LEVEL TITLE CODE NUMBER PRESENT SALARY
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: REASON D LEAVE WITHOUT PAY
-FieldNameAlt: REASON D LEAVE WITHOUT PAY
+FieldName: Text Box - TITLE CODE NUMBER
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: FROM TO
+FieldName: Text Box - PRESENT SALARY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - TITLE CODE NO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - CML SERVICE (Present Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - PROVISIONAL (Present Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - NON-COMP (Present Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - OTHER (Present Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - CML SERVICE (Requested Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - PROVISIONAL (Requested Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - NON-COMP (Requested Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - OTHER (Requested Status)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - SALARY REQUESTED
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - OTHER (Type of Action Requested)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - MERIT INCREASE
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - AMOUNT OF INCREASE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - PERCENT OF INCREASE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - NEW SALARY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - REASON
+FieldNameAlt: REASON D LEAVE WITHOUT PAY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - LEAVE WITHOUT PAY
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - SEPARATION
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - REASON FOR SEPARATION
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - FROM
 FieldNameAlt: FROM TO
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: INDICATE FUNDING SOURCE TAX LEVY IFA CD OTHER REMARKS
+FieldName: Text Box - TO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - SEPARATION DATE (C.O.B.)
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: 
+FieldName: Text Box - SEPARATION DATE (C.O
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: 
+FieldName: Text Box - SEPARATION DATE (C
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - TYPE OF SEPARATION
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - C.O.B. DATE
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: 
+FieldName: Text Box - C.O
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: 
+FieldName: Text Box - C
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - SALARY
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - TAX LEVY (Indicate Funding Source)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - IFA (Indicate Funding Source)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - CD (Indicate Funding Source)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - AMOUNT (Increase to Pay-As-You-Go?)
+FieldNameAlt: AMOUNT INCREASE TO PAY-AS-YOU-GO? Q YES D NO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - NO (Increase to Pay-As-You-Go?)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Check Box - YES (Increase to Pay-As-You-Go?)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - TITLE (Justification and/or Remarks)
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Field - Name (Justification and/or Remarks)
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - PROMOTION (Type of Action Requested)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - PAY LOCATION (Type of Action Requested)
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box - NEW APPOINTMENT (Type of Action Requested)
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: Text Box - OTHER REMARKS
 FieldNameAlt: INDICATE FUNDING SOURCE: TAX LEVY IFA CD OTHER REMARKS:
 FieldFlags: 4096
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: BUREAU HEAD OR DESIGNEE
-FieldNameAlt: BUREAU HEAD OR DESIGNEE
+FieldName: Text Box - BUREAU HEAD OR DESIGNEE
 FieldFlags: 0
 FieldJustification: Left
 ---
-FieldType: Text
-FieldName: DATE
-FieldNameAlt: DATE
+FieldType: Button
+FieldName: Check Box - YES (T/O Change?)
 FieldFlags: 0
 FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
 ---
-FieldType: Text
-FieldName: EXPLANATION
-FieldNameAlt: EXPLANATION
-FieldFlags: 4096
-FieldJustification: Left
----
-FieldType: Text
-FieldName: AMOUNT INCREASE TO PAYASYOUGO Q YES D NO
-FieldNameAlt: AMOUNT INCREASE TO PAY-AS-YOU-GO? Q YES D NO
+FieldType: Button
+FieldName: Check Box - NO (T/O Change?)
 FieldFlags: 0
 FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
 ---
 FieldType: Text
-FieldName: APPOINTMENT DATE WORK LOCATION PAYROLL DIST NO
+FieldName: Text Box - APPOINTMENT DATE
 FieldNameAlt: APPOINTMENT DATE WORK LOCATION PAYROLL DIST. NO.
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: BUDGET CODE  LINE NUMBER
+FieldName: Text Box - WORK LOCATION
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - PAYROLL DIST.NO
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - BUDGET CODE &amp; LINE NUMBER
 FieldNameAlt: BUDGET CODE &amp; LINE NUMBER
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: DIRECTOR OF PERSONNEL OR DESIGNEE
-FieldNameAlt: DIRECTOR OF PERSONNEL OR DESIGNEE
+FieldName: Text Box - VACANCY NOTICE NUMBER
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: DATE_2
-FieldNameAlt: DATE
+FieldName: Text Box - EXPIRES
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text1
+FieldName: Text Box - TITLE/LEVEL
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text2
+FieldName: Text Box - DP 363A
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text3
+FieldName: Text Box - DP 40G
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text4
+FieldName: Text Box - MPD
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text5
+FieldName: Text Box - EXPLANATION
+FieldNameAlt: EXPLANATION
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Text Box - DIRECTOR OF PERSONEEL OR DESIGNEE
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text6
+FieldName: Text Box - LAST DAY WORKED
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text7
+FieldName: Text Box - DATE (Type of Action Requested)
 FieldFlags: 0
 FieldJustification: Left
 ---
 FieldType: Text
-FieldName: Text8
+FieldName: Text Box - DATE (For Bureau of Personnel Use Only)
 FieldFlags: 0
 FieldJustification: Left
----
-FieldType: Text
-FieldName: Text9
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text10
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text11
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text12
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box13
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box14
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box15
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box16
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box17
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Text
-FieldName: Text18
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text19
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box20
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box21
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Text
-FieldName: Text22
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box23
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box24
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box25
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box26
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box27
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Text
-FieldName: Text28
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text29
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text30
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box31
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Text
-FieldName: Text32
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box33
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box34
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box35
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box36
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box37
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box38
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Button
-FieldName: Check Box39
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes
----
-FieldType: Text
-FieldName: Text40
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text41
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text42
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text43
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text44
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text45
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text46
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text47
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text48
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Text
-FieldName: Text13
-FieldFlags: 0
-FieldJustification: Left
----
-FieldType: Button
-FieldName: Check Box18
-FieldFlags: 0
-FieldJustification: Left
-FieldStateOption: Off
-FieldStateOption: Yes

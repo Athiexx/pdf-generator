@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" type="image/png" href="./images/icons8-favicon-50.png">
-    <script type="module" src="index.js">
+    <script type="module" src="index.js"></script>
     </script>
     <title>Human Resources Website</title>
 </head>
-
+<!-- MAKE THE NAMES FOR BOTH THE BUTTONS AND TEXT FIELDS TO BE MATCHED TO THE PDF-->
 <body>
     <div id="dsnyLogo-container" class="dsnyLogo">
         <img src="./images/New_York_City_Department_of_Sanitation_logo.svg"
@@ -21,7 +21,7 @@
     <p>This website is for the DS-46 form.</p>
 
     <div id="form-container">
-        <form>
+        <form id="ds46-form">
 
             <fieldset id="personnel-action-section">
                 <legend><u>Request for Personnel Action DS 46</u></legend>
@@ -32,58 +32,59 @@
                 </div>
                 <div id="textbox-field-personnel-action" class="horizontal-section">
                     <div>
-                        <label for="bureau">Bureau</label>
-                        <input type="text" id="bureau" name="bureau">
+                        <label for="Text Box - BUREAU">Bureau</label>
+                        <input type="text" id="Text Box - BUREAU" name="Text Box - BUREAU">
                     </div>
                     <div>
-                        <label for="division">Division</label>
-                        <input type="text" id="division" name="division">
+                        <label for="Text Box - DIVISION">Division</label>
+                        <input type="text" id="Text Box - DIVISION" name="Text Box - DIVISION">
                     </div>
                     <div>
-                        <label for="pay-location">Pay Location</label>
-                        <input type="text" id="pay-location" name="pay-location">
+                        <label for="Text Box - PAY LOCATION (Type of Action Requested)">Pay Location</label>
+                        <input type="text" id="Text Box - PAY LOCATION (Type of Action Requested)" name="Text Box - PAY LOCATION (Type of Action Requested)">
                     </div>
                     <div>
-                        <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" name="firstname">
+                        <label for="Text Box - FIRST NAME">First Name</label>
+                        <input type="text" id="Text Box - FIRST NAME" name="Text Box - FIRST NAME">
                     </div>
                     <div>
-                        <label for="lastname">Last Name</label>
-                        <input type="text" id="lastname" name="lastname">
+                        <label for="Text Box - LAST NAME">Last Name</label>
+                        <input type="text" id="Text Box - LAST NAME" name="Text Box - LAST NAME">
                     </div>
                     <div>
-                        <label for="reference-number">Reference Number</label>
-                        <input type="text" id="reference-number" name="reference-number">
+                        <label for="Text Box - REFERENCE NUMBER">Reference Number</label>
+                        <input type="text" id="Text Box - REFERENCE NUMBER" name="Text Box - REFERENCE NUMBER">
                     </div>
                     <div>
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address">
+                        <label for="Text Box - ADDRESS">Address</label>
+                        <input type="text" id="Text Box - ADDRESS" name="Text Box - ADDRESS">
                     </div>
                     <div>
-                        <label for="present-title-level">Present Title/Level</label>
-                        <input type="text" id="present-title-level" name="present-title-level">
+                        <label for="Text Box - PRESENT TITLE/LEVEL">Present Title/Level</label>
+                        <input type="text" id="Text Box - PRESENT TITLE/LEVEL" name="Text Box - PRESENT TITLE/LEVEL">
                     </div>
                     <div>
-                        <label for="title-code-number">Title Code Number</label>
-                        <input type="text" id="title-code-number" name="title-code-number">
+                        <label for="Text Box - TITLE CODE NUMBER (Personnel Action)">Title Code Number</label>
+                        <input type="text" id="Text Box - TITLE CODE NUMBER (Personnel Action)" name="Text Box - TITLE CODE NUMBER (Personnel Action)">
                     </div>
                 </div>
+                <!-- Unsure if ids are needed for pdf-lib ...? -->
                 <h3><u>Present Status</u></h3>
                 <div id="checkbox-field-personnel-action" class="padding-class">
                     <div>
-                        <input type="radio" id="civil-service-present-status" name="checkbox-personnel-action">
+                        <input type="radio" id="civil-service-present-status" name="Check Box - Present Status (Personnel Action)" value="Civil Service">
                         <label for="civil-service-present-status">Civil Service</label>
                     </div>
                     <div>
-                        <input type="radio" id="provisional-present-status" name="checkbox-personnel-action">
+                        <input type="radio" id="provisional-present-status" name="Check Box - Present Status (Personnel Action)" value="Provisional">
                         <label for="provisional-present-status">Provisional</label>
                     </div>
                     <div>
-                        <input type="radio" id="non-comp-present-status" name="checkbox-personnel-action">
+                        <input type="radio" id="non-comp-present-status" name="Check Box - Present Status (Personnel Action)" value="Non-Competitive">
                         <label for="non-comp-present-status">Non-Competitive</label>
                     </div>
                     <div>
-                        <input type="radio" id="other-present-status" name="checkbox-personnel-action">
+                        <input type="radio" id="other-present-status" name="Check Box - Present Status (Personnel Action)" value="Other">
                         <label for="other-present-status">Other</label>
                     </div>
 
@@ -100,8 +101,8 @@
                             <input type="text" id="title-level" name="title-level">
                         </div>
                         <div>
-                            <label for="title-code-number">Title Code Number</label>
-                            <input type="text" id="title-code-number" name="title-code-number">
+                            <label for="title-code-number-action">Title Code Number</label>
+                            <input type="text" id="title-code-number-action" name="title-code-number-action">
                         </div>
                         <div>
                             <label for="salary-requested">Salary Requested</label>
@@ -336,10 +337,11 @@
             </fieldset>
 
         </form>
+        <button form="ds46-form" type="submit">Submit</button>
     </div>
 
-    <div id="button-container">
-        <button name="submit">Submit</button>
+    <div id="iframe-container">
+        <iframe id="pdf-iframe" class="is-hidden"></iframe>
     </div>
 </body>
 

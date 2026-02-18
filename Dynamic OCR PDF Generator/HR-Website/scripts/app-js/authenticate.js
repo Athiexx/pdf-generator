@@ -1,6 +1,5 @@
-import "../jquery/jquery-3.7.1.min.js"; 
-
-// Create a local reference (alias) to the globally available jQuery object/function
+import "../library-js/jquery-3.7.1.min.js";
+ // Ensure jQuery is imported before using it
 const $ = window.jQuery; 
 
 window.ticket = "";
@@ -12,7 +11,7 @@ export async function authenticate() {
 
         if (existingTicket) {
             window.ticket = existingTicket;
-            console.log("Ticket:", window.ticket);
+            console.log("Existing Ticket:", window.ticket);
             console.log("Using existing ticket from session.");
             return resolve(existingTicket);
         }
