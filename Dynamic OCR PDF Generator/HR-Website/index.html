@@ -11,6 +11,7 @@
     <title>Human Resources Website</title>
 </head>
 <!-- MAKE THE NAMES FOR BOTH THE BUTTONS AND TEXT FIELDS TO BE MATCHED TO THE PDF-->
+<!-- Write a script to save all the field names for the DS 46 Form-->
 <body>
     <div id="dsnyLogo-container" class="dsnyLogo">
         <img src="./images/New_York_City_Department_of_Sanitation_logo.svg"
@@ -41,7 +42,8 @@
                     </div>
                     <div>
                         <label for="Text Box - PAY LOCATION (Type of Action Requested)">Pay Location</label>
-                        <input type="text" id="Text Box - PAY LOCATION (Type of Action Requested)" name="Text Box - PAY LOCATION (Type of Action Requested)">
+                        <input type="text" id="Text Box - PAY LOCATION (Type of Action Requested)"
+                            name="Text Box - PAY LOCATION (Type of Action Requested)">
                     </div>
                     <div>
                         <label for="Text Box - FIRST NAME">First Name</label>
@@ -65,26 +67,31 @@
                     </div>
                     <div>
                         <label for="Text Box - TITLE CODE NUMBER (Personnel Action)">Title Code Number</label>
-                        <input type="text" id="Text Box - TITLE CODE NUMBER (Personnel Action)" name="Text Box - TITLE CODE NUMBER (Personnel Action)">
+                        <input type="text" id="Text Box - TITLE CODE NUMBER (Personnel Action)"
+                            name="Text Box - TITLE CODE NUMBER (Personnel Action)">
                     </div>
                 </div>
                 <!-- Unsure if ids are needed for pdf-lib ...? -->
                 <h3><u>Present Status</u></h3>
                 <div id="checkbox-field-personnel-action" class="padding-class">
                     <div>
-                        <input type="radio" id="civil-service-present-status" name="Check Box - Present Status (Personnel Action)" value="Civil Service">
+                        <input type="radio" id="civil-service-present-status"
+                            name="Check Box - Present Status (Personnel Action)" value="Civil Service">
                         <label for="civil-service-present-status">Civil Service</label>
                     </div>
                     <div>
-                        <input type="radio" id="provisional-present-status" name="Check Box - Present Status (Personnel Action)" value="Provisional">
+                        <input type="radio" id="provisional-present-status"
+                            name="Check Box - Present Status (Personnel Action)" value="Provisional">
                         <label for="provisional-present-status">Provisional</label>
                     </div>
                     <div>
-                        <input type="radio" id="non-comp-present-status" name="Check Box - Present Status (Personnel Action)" value="Non-Competitive">
+                        <input type="radio" id="non-comp-present-status"
+                            name="Check Box - Present Status (Personnel Action)" value="Non-Competitive">
                         <label for="non-comp-present-status">Non-Competitive</label>
                     </div>
                     <div>
-                        <input type="radio" id="other-present-status" name="Check Box - Present Status (Personnel Action)" value="Other">
+                        <input type="radio" id="other-present-status"
+                            name="Check Box - Present Status (Personnel Action)" value="Other">
                         <label for="other-present-status">Other</label>
                     </div>
 
@@ -97,100 +104,94 @@
                     <h3><u>New Appointment, Promotion, or Other</u></h3>
                     <div id="newappointment-promotion-other-action" class="horizontal-section">
                         <div>
-                            <label for="title-level">Title/Level</label>
-                            <input type="text" id="title-level" name="title-level">
+                            <label for="Text Box - TITLE/LEVEL">Title/Level</label>
+                            <input type="text" id="Text Box - TITLE/LEVEL" name="Text Box - TITLE/LEVEL">
                         </div>
                         <div>
-                            <label for="title-code-number-action">Title Code Number</label>
-                            <input type="text" id="title-code-number-action" name="title-code-number-action">
+                            <label for="Text Box - TITLE CODE NUMBER (Type of Action)">Title Code Number</label>
+                            <input type="text" id="Text Box - TITLE CODE NUMBER (Type of Action)"
+                                name="Text Box - TITLE CODE NUMBER (Type of Action)">
                         </div>
                         <div>
-                            <label for="salary-requested">Salary Requested</label>
-                            <input type="text" id="salary-requested" name="salary-requested">
-                        </div>
-                        <div>
-                            <label for="amount-of-increase">Amount of Increase</label>
-                            <input type="text" id="amount-of-increase" name="amount-of-increase">
-                        </div>
-                        <div>
-                            <label for="percent-of-increase">Percent of Increase</label>
-                            <input type="text" id="percent-of-increase" name="percent-of-increase">
-                        </div>
-                        <div>
-                            <label for="new-salary">New Salary</label>
-                            <input type="text" id="new-salary" name="new-salary">
+                            <label for="Text Box - SALARY REQUESTED">Salary Requested</label>
+                            <input type="text" id="Text Box - SALARY REQUESTED" name="Text Box - SALARY REQUESTED">
                         </div>
                     </div>
                     <h3><u>Merit Increase</u></h3>
-                    <div id="merit-increase-action-1" class="horizontal-section">
+                    <div id="merit-increase-action" class="horizontal-section">
                         <div>
-                            <label for="amount-of-increase-merit">Amount of Increase</label>
-                            <input type="text" id="amount-of-increase-merit" name="amount-of-increase-merit">
+                            <label for="Text Box - AMOUNT OF INCREASE">Amount of Increase</label>
+                            <input type="text" id="Text Box - AMOUNT OF INCREASE" name="Text Box - AMOUNT OF INCREASE">
                         </div>
                         <div>
-                            <label for="percent-of-increase-merit">Percent of Increase</label>
-                            <input type="text" id="percent-of-increase-merit" name="percent-of-increase-merit">
+                            <label for="Text Box - PERCENT OF INCREASE">Percent of Increase</label>
+                            <input type="text" id="Text Box - PERCENT OF INCREASE"
+                                name="Text Box - PERCENT OF INCREASE">
                         </div>
                         <div>
-                            <label for="new-salary-merit">New Salary</label>
-                            <input type="text" id="new-salary-merit" name="new-salary-merit">
+                            <label for="Text Box - NEW SALARY">New Salary</label>
+                            <input type="text" id="Text Box - NEW SALARY" name="Text Box - NEW SALARY">
                         </div>
                     </div>
                     <h3><u>Separation</u></h3>
                     <div id="separation-action" class="horizontal-section">
                         <div>
-                            <label for="reason-for-separation">Reason for Separation</label>
-                            <input type="text" id="reason-for-separation" name="reason-for-separation">
+                            <label for="Text Box - REASON FOR SEPARATION">Reason for Separation</label>
+                            <input type="text" id="Text Box - REASON FOR SEPARATION"
+                                name="Text Box - REASON FOR SEPARATION">
                         </div>
                         <div>
-                            <label for="last-day-of-work">Last Day Worked</label>
-                            <input type="text" id="last-day-of-work" name="last-day-of-work">
+                            <label for="Text Box - LAST DAY WORKED">Last Day Worked</label>
+                            <input type="text" id="Text Box - LAST DAY WORKED" name="Text Box - LAST DAY WORKED">
                         </div>
                         <div>
-                            <label for="separation-date">Separation Date</label>
-                            <input type="date" id="separation-date" name="separation-date">
+                            <label for="Text Box - SEPARATION DATE (C.O.B.)">Separation Date</label>
+                            <input type="date" id="Text Box - SEPARATION DATE (C.O.B.)"
+                                name="Text Box - SEPARATION DATE (C.O.B.)">
                         </div>
                     </div>
                     <h3><u>Leave Without Pay</u></h3>
-                    <div id="leave-without-pay-action"  class="horizontal-section">
+                    <div id="leave-without-pay-action" class="horizontal-section">
                         <div>
-                            <label for="reason">Reason</label>
-                            <input type="text" id="reason" name="reason">
+                            <label for="Text Box - REASON">Reason</label>
+                            <input type="text" id="Text Box - REASON" name="Text Box - REASON">
                         </div>
                         <div>
-                            <label for="from">From</label>
-                            <input type="date" id="from" name="from">
+                            <label for="Text Box - FROM">From</label>
+                            <input type="date" id="Text Box - FROM" name="Text Box - FROM">
                         </div>
                         <div>
-                            <label for="to">To</label>
-                            <input type="date" id="to" name="to">
+                            <label for="Text Box - TO">To</label>
+                            <input type="date" id="Text Box - TO" name="Text Box - TO">
                         </div>
                     </div>
                     <h3><u>Justification and/or Remarks</u></h3>
                     <div id="justification-and/or-remarks-action" class="horizontal-section">
                         <div>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name">
+                            <label for="Text Field - Name (Justification and/or Remarks)">Name</label>
+                            <input type="text" id="Text Field - Name (Justification and/or Remarks)"
+                                name="Text Field - Name (Justification and/or Remarks)">
                         </div>
                         <div>
-                            <label for="title">Title</label>
-                            <input type="text" id="title" name="title">
+                            <label for="Text Box - TITLE (Justification and/or Remarks)">Title</label>
+                            <input type="text" id="Text Box - TITLE (Justification and/or Remarks)"
+                                name="Text Box - TITLE (Justification and/or Remarks)">
                         </div>
                         <div>
-                            <label for="type-of-separation">Type of Separation</label>
-                            <input type="text" id="type-of-separation" name="type-of-separation">
+                            <label for="Text Box - TYPE OF SEPARATION">Type of Separation</label>
+                            <input type="text" id="Text Box - TYPE OF SEPARATION" name="Text Box - TYPE OF SEPARATION">
                         </div>
                         <div>
-                            <label for="C.O.B.-date">C.O.B. Date</label>
-                            <input type="date" id="C.O.B.-date" name="C.O.B.-date">
+                            <label for="Text Box - C.O.B. DATE">C.O.B. Date</label>
+                            <input type="date" id="Text Box - C.O.B. DATE" name="Text Box - C.O.B. DATE">
                         </div>
                         <div>
-                            <label for="salary">Salary</label>
-                            <input type="text" id="salary" name="salary">
+                            <label for="Text Box - SALARY">Salary</label>
+                            <input type="text" id="Text Box - SALARY" name="Text Box - SALARY">
                         </div>
                         <div>
-                            <label for="other-remarks">Other Remarks</label>
-                            <input type="text" id="other-remarks" name="other-remarks">
+                            <label for="Text Box - OTHER REMARKS">Other Remarks</label>
+                            <input type="text" id="Text Box - OTHER REMARKS" name="Text Box - OTHER REMARKS">
                         </div>
                     </div>
                 </div>
@@ -198,61 +199,70 @@
                     <h3><u>Type of Action Requested</u></h3>
                     <div id="type-of-action-requested">
                         <div>
-                            <input type="radio" id="new-appointment" name="type-of-action-requested">
+                            <input type="radio" id="new-appointment" name="Check Box - Type of Action Requested"
+                                value="New Appointment">
                             <label for="new-appointment">New Appointment</label>
                         </div>
                         <div>
-                            <input type="radio" id="promotion" name="type-of-action-requested">
+                            <input type="radio" id="promotion" name="Check Box - Type of Action Requested"
+                                value="Promotion">
                             <label for="promotion">Promotion</label>
                         </div>
                         <div>
-                            <input type="radio" id="other" name="type-of-action-requested">
+                            <input type="radio" id="other" name="Check Box - Type of Action Requested" value="Other">
                             <label for="other">Other</label>
                         </div>
                         <div>
-                            <input type="radio" id="merit-increase" name="type-of-action-requested">
+                            <input type="radio" id="merit-increase" name="Check Box - Type of Action Requested"
+                                value="Merit Increase">
                             <label for="merit-increase">Merit Increase</label>
                         </div>
                         <div>
-                            <input type="radio" id="separation" name="type-of-action-requested">
+                            <input type="radio" id="separation" name="Check Box - Type of Action Requested"
+                                value="Separation">
                             <label for="separation">Separation</label>
                         </div>
                         <div>
-                            <input type="radio" id="leave-without-pay" name="type-of-action-requested">
+                            <input type="radio" id="leave-without-pay" name="Check Box - Type of Action Requested"
+                                value="Leave Without Pay">
                             <label for="leave-without-pay">Leave Without Pay</label>
                         </div>
                     </div>
                     <h3><u>Requested Status</u></h3>
-                    <div id="requested status">
+                    <div id="requested-status">
                         <div>
-                            <input type="radio" id="civil-service-requested-status" name="requested-status">
+                            <input type="radio" id="civil-service-requested-status" name="Check Box - Requested Status"
+                                value="Civil Service">
                             <label for="civil-service-requested-status">Civil Service</label>
                         </div>
                         <div>
-                            <input type="radio" id="provisional-requested-status" name="requested-status">
+                            <input type="radio" id="provisional-requested-status" name="Check Box - Requested Status"
+                                value="Provisional">
                             <label for="provisional-requested-status">Provisional</label>
                         </div>
                         <div>
-                            <input type="radio" id="non-comp-requested-status" name="requested-status">
+                            <input type="radio" id="non-comp-requested-status" name="Check Box - Requested Status"
+                                value="Non-Competitive">
                             <label for="non-comp-requested-status">Non-Competitive</label>
                         </div>
                         <div>
-                            <input type="radio" id="other-requested-status" name="requested-status">
+                            <input type="radio" id="other-requested-status" name="Check Box - Requested Status"
+                                value="Other">
                             <label for="other-requested-status">Other</label>
                         </div>
                     </div>
                     <h3><u>Funding Source</u></h3>
                     <div id="funding-source">
                         <div>
-                            <input type="radio" id="tax-levy" name="funding-source">
+                            <input type="radio" id="tax-levy" name="Check Box - Funding Source" value="Tax Levy">
                             <label for="tax-levy">Tax Levy</label>
                         </div>
                         <div>
-                            <input type="radio" id="IFA" name="funding-source">
+                            <input type="radio" id="IFA" name="Check Box - Funding Source" value="IFA">
                             <label for="IFA">IFA</label>
                         </div>
                         <div>
-                            <input type="radio" id="CD" name="funding-source">
+                            <input type="radio" id="CD" name="Check Box - Funding Source" value="CD">
                             <label for="CD">CD</label>
                         </div>
                     </div>
@@ -261,81 +271,101 @@
 
             <fieldset id="bureau-of-personnel-use-only-section">
                 <legend><u>Bureau of Personnel Use Only</u></legend>
-                <div id="textbox-field-bureau-of-personnel-use-only" class="horizontal-section">
-                    <div>
-                        <label for="explanation">Explanation</label>
-                        <input type="text" id="explanation" name="explanation">
+                <div id="textbox-field-bureau-of-personnel-use-only">
+                    <div id="bureau-of-personnel-use-only" class="horizontal-section">
+                        <div>
+                            <label for="Text Box - EXPLANATION">Explanation</label>
+                            <input type="text" id="Text Box - EXPLANATION" name="Text Box - EXPLANATION">
+                        </div>
+                        <div>
+                            <label for="Text Box - AMOUNT (Increase to Pay-As-You-Go?)">Amount</label>
+                            <input type="text" id="Text Box - AMOUNT (Increase to Pay-As-You-Go?)"
+                                name="Text Box - AMOUNT (Increase to Pay-As-You-Go?)">
+                        </div>
+                        <div>
+                            <label for="Text Box - APPOINTMENT DATE">Appointment Date</label>
+                            <input type="date" id="Text Box - APPOINTMENT DATE" name="Text Box - APPOINTMENT DATE">
+                        </div>
+                        <div>
+                            <label for="Text Box - WORK LOCATION">Work Location</label>
+                            <input type="text" id="Text Box - WORK LOCATION" name="Text Box - WORK LOCATION">
+                        </div>
+                        <div>
+                            <label for="Text Box - PAYROLL DIST NUMBER">Payroll Dist. No.</label>
+                            <input type="text" id="Text Box - PAYROLL DIST NUMBER"
+                                name="Text Box - PAYROLL DIST NUMBER">
+                        </div>
+                        <div>
+                            <label for="Text Box - BUDGET CODE & LINE NUMBER">Budget Code & Line Number</label>
+                            <input type="text" id="Text Box - BUDGET CODE & LINE NUMBER"
+                                name="Text Box - BUDGET CODE & LINE NUMBER">
+                        </div>
+                        <div>
+                            <label for="Text Box - DIRECTOR OF PERSONEEL OR DESIGNEE">Director of Personnel or
+                                Designee</label>
+                            <input type="text" id="Text Box - DIRECTOR OF PERSONEEL OR DESIGNEE"
+                                name="Text Box - DIRECTOR OF PERSONEEL OR DESIGNEE">
+                        </div>
+                        <div>
+                            <label for="Text Box - DATE (For Bureau of Personnel Use Only)">Date</label>
+                            <input type="date" id="Text Box - DATE (For Bureau of Personnel Use Only)"
+                                name="Text Box - DATE (For Bureau of Personnel Use Only)">
+                        </div>
                     </div>
-                    <div>
-                        <label for="amount">Amount</label>
-                        <input type="text" id="amount" name="amount">
-                    </div>
-                    <div>
-                        <label for="appointment-date">Appointment Date</label>
-                        <input type="date" id="appointment-date" name="appointment-date">
-                    </div>
-                    <div>
-                        <label for="work-location">Work Location</label>
-                        <input type="text" id="work-location" name="work-location">
-                    </div>
-                    <div>
-                        <label for="payroll-district-number">Payroll Dist. No.</label>
-                        <input type="text" id="payroll-district-number" name="payroll-district-number">
-                    </div>
-                    <div>
-                        <label for="budget-code-and-line-number">Budget Code & Line Number</label>
-                        <input type="text" id="budget-code-and-line-number" name="budget-code-and-line-number">
-                    </div>
-                    <div>
-                        <label for="director-of-personnel/designee">Director of Personnel or Designee</label>
-                        <input type="text" id="director-of-personnel/designee" name="director-of-personnel/designee">
-                    </div>
-                    <div>
-                        <label for="date">Date</label>
-                        <input type="date" id="date" name="date">
+                    <h3><u>Remarks</u></h3>
+                    <div id="remarks" class="horizontal-section">
+                        <div>
+                            <label for="Text Box - VACANCY NOTICE NUMBER">Vacancy Notice Number</label>
+                            <input type="text" id="Text Box - VACANCY NOTICE NUMBER"
+                                name="Text Box - VACANCY NOTICE NUMBER">
+                        </div>
+                        <div>
+                            <label for="Text Box - EXPIRES">Expires</label>
+                            <input type="text" id="Text Box - EXPIRES" name="Text Box - EXPIRES">
+                        </div>
                     </div>
                     <h3><u>If Applicable</u></h3>
-                    <div id="if-applicable">
+                    <div id="if-applicable" class="horizontal-section">
                         <div>
-                            <label for="if-applicable-DP363A">DP 363A</label>
-                            <input type="text" id="if-applicable-DP363A" name="if-applicable">
+                            <label for="Text Box - DP 363A">DP 363A</label>
+                            <input type="text" id="Text Box - DP 363A" name="Text Box - DP 363A">
                         </div>
                         <div>
-                            <label for="if-applicable-DP40G">DP 40G</label>
-                            <input type="text" id="if-applicable-DP40G" name="if-applicable">
+                            <label for="Text Box - DP 40G">DP 40G</label>
+                            <input type="text" id="Text Box - DP 40G" name="Text Box - DP 40G">
                         </div>
                         <div>
-                            <label for="if-applicable-MPD">MPD</label>
-                            <input type="text" id="if-applicable-MPD" name="if-applicable">
+                            <label for="Text Box - MPD">MPD</label>
+                            <input type="text" id="Text Box - MPD" name="Text Box - MPD">
                         </div>
                     </div>
                 </div>
+
                 <div id="checkbox-field-bureau-of-personnel-use-only">
                     <h3><u>T/O Change</u></h3>
                     <div id="T/O-change">
                         <div>
-                            <input type="radio" id="T/O-change-yes" name="T/O-change">
+                            <input type="radio" id="T/O-change-yes" name="Check Box - T/O Change?" value="Yes">
                             <label for="T/O-change-yes">Yes</label>
                         </div>
                         <div>
-                            <input type="radio" id="T/O-change-no" name="T/O-change">
+                            <input type="radio" id="T/O-change-no" name="Check Box - T/O Change?" value="No">
                             <label for="T/O-change-no">No</label>
                         </div>
                     </div>
                     <h3><u>Increase Pay As You Go</u></h3>
                     <div id="increase-pay-as-you-go">
                         <div>
-                            <input type="radio" id="increase-pay-as-you-go-yes" name="increase-pay-as-you-go">
+                            <input type="radio" id="increase-pay-as-you-go-yes" name="Check Box - Increase to Pay-As-You-Go?" value="Yes">
                             <label for="increase-pay-as-you-go-yes">Yes</label>
                         </div>
                         <div>
-                            <input type="radio" id="increase-pay-as-you-go-no" name="increase-pay-as-you-go">
+                            <input type="radio" id="increase-pay-as-you-go-no" name="Check Box - Increase to Pay-As-You-Go?" value="No">
                             <label for="increase-pay-as-you-go-no">No</label>
                         </div>
                     </div>
                 </div>
             </fieldset>
-
         </form>
         <button form="ds46-form" type="submit">Submit</button>
     </div>
