@@ -42,7 +42,6 @@ Check Box - Present Status (Personnel Action)
 Check Box - Type of Action Requested
 Check Box - Requested Status
 Text Box - OTHER REMARKS
-Check Box - OTHER (Requested Status)
 Check Box - Funding Source
 Text Box - PAYROLL DIST NUMBER
 Check Box - T/O Change?
