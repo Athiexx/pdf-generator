@@ -24,10 +24,6 @@ export async function generatePDF(formData) {
     console.log("Available PDF Fields:", allPdfFields);
     console.log("Extracted Form Data Keys:", Object.keys(formData));
 
-    // Fill in the form fields with extracted data
-    let filledCount = 0;
-    let notFoundCount = 0;
-    let errorCount = 0;
 
     Object.keys(formData).forEach(fieldName => {
       try {
@@ -35,30 +31,27 @@ export async function generatePDF(formData) {
         if (field) {
           const fieldType = field.getType();
           const fieldValue = String(formData[fieldName]);
-
+        // FIX THE ADOBE FORM. THE FORM IS SUPPOSED TO HAVE TEXT AND RADIO FIELDS ONLY
+        // there's a memory leak because of this
           try {
             if (fieldType === 'text') {
               field.setText(fieldValue);
-              console.log(`✓ Filled TEXT field: "${fieldName}" with value: "${fieldValue}"`);
-              filledCount++;
+              console.log(`Filled TEXT field: "${fieldName}" with value: "${fieldValue}"`);
+
             } else if (fieldType === 'radio') {
               field.select(fieldValue);
-              console.log(`✓ Filled RADIO field: "${fieldName}" with value: "${fieldValue}"`);
-              filledCount++;
-            } else {
-              console.warn(`⚠ Unsupported field type "${fieldType}" for field: "${fieldName}"`);
+              console.log(`Filled RADIO field: "${fieldName}" with value: "${fieldValue}"`);
             }
           } catch (selectError) {
-            console.error(`✗ Failed to fill field "${fieldName}" with value "${fieldValue}" (${fieldType}):`, selectError.message);
-            errorCount++;
+            console.error(`Failed to fill field "${fieldName}" with value "${fieldValue}" (${fieldType}):`, selectError.message);
           }
-        } else {
-          console.warn(`✗ Field "${fieldName}" NOT FOUND in PDF form`);
-          notFoundCount++;
+        } 
+        
+        else {
+          console.warn(`Field "${fieldName}" NOT FOUND in PDF form`);
         }
       } catch (error) {
-        console.error(`✗ Critical error accessing field "${fieldName}":`, error.message);
-        errorCount++;
+        console.error(`Critical error accessing field "${fieldName}":`, error.message);
       }
     });
 
