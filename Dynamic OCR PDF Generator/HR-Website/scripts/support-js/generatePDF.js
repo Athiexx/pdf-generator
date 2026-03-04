@@ -1,87 +1,99 @@
-import { PDFDocument } from '../library-js/pdf-lib.esm.min.js';
+import { PDFDocument, StandardFonts } from '../library-js/pdf-lib.esm.min.js';
+import { getAllFormInputTypes } from './getAllFormInputTypes.js';
+export async function generatePDF(pdfData) {
 
-export async function generatePDF(formData) {
-  try {
-    // Load the PDF template
-    const pdfPath = './forms/DS 46 New.pdf';
-    const pdfResponse = await fetch(pdfPath);
+  // initialize inputTypes object to hold the type and value of each form input, which will be used to determine how to fill the PDF form fields
+  let inputTypes = new Object();
+  inputTypes = await getAllFormInputTypes();
+  let pdfDoc = new Object();
 
-    if (!pdfResponse.ok) {
-      throw new Error(`Failed to load PDF template: ${pdfResponse.status}`);
-    }
+  // Load the PDF template
+  const pdfPath = './forms/DS 46 New.pdf';
+  const pdfResponse = await fetch(pdfPath);
 
-    // turn the pdf into raw binary data
-    const pdfBytes = await pdfResponse.arrayBuffer();
+  if (!pdfResponse.ok) {
+    throw new Error(`Failed to load PDF template: ${pdfResponse.status}`);
+  }
 
-    // Load the PDF document. Loads as a PDFDocument object that we can manipulate with pdf-lib
-    const pdfDoc = await PDFDocument.load(pdfBytes);
+  // turn the pdf into raw binary data
+  const pdfBytes = await pdfResponse.arrayBuffer();
 
-    // Get the form fields
-    const form = pdfDoc.getForm();
-
-    // Get all available PDF field names for debugging
-    const allPdfFields = form.getFields().map(f => ({ name: f.getName(), type: f.getType() }));
-    console.log("Available PDF Fields:", allPdfFields);
-    console.log("Extracted Form Data Keys:", Object.keys(formData));
+  // Load the PDF document. Loads as a PDFDocument object that we can manipulate with pdf-lib
+  pdfDoc = await PDFDocument.load(pdfBytes);
 
 
-    Object.keys(formData).forEach(fieldName => {
+  // Get the form fields and set the fonts
+  const formData = pdfDoc.getForm();
+  const fonts = await pdfDoc.embedFont(StandardFonts.TimesRoman);
+
+  //const test = formData.getTextField("Text Box - MPD");
+  //const test2 = pdfData['Text Box - MPD'];
+  //console.log("Test field object (test):", test);
+  //console.log("Test field value (test2):", test2);
+
+  //test.setText(test2 || '');
+  // test.setText(pdfData['Text Box - MPD'] || '');
+  //form.getTextField("Text Box - BUREAU").setText(pdfData['Text Box - BUREAU'] || '');
+
+
+  Object.keys(pdfData).forEach(fieldName => {
+
+    let pdfField = formData.getFieldMaybe(fieldName);  // Get FIELD OBJECT from Form
+    let fieldValue = pdfData[fieldName];  // Get VALUE from PDF
+    
+    // Get the input type and id from the inputTypes object
+    let type = inputTypes[fieldName].type;  // Get only the type
+    let value = inputTypes[fieldName].value; // Get only the value (for radio buttons)
+
+    if (pdfField) {
+
       try {
-        const field = form.getField(fieldName);
-        if (field) {
-          const fieldType = field.getType();
-          const fieldValue = String(formData[fieldName]);
-        // FIX THE ADOBE FORM. THE FORM IS SUPPOSED TO HAVE TEXT AND RADIO FIELDS ONLY
-        // there's a memory leak because of this
-          try {
-            if (fieldType === 'text') {
-              field.setText(fieldValue);
-              console.log(`Filled TEXT field: "${fieldName}" with value: "${fieldValue}"`);
-
-            } else if (fieldType === 'radio') {
-              field.select(fieldValue);
-              console.log(`Filled RADIO field: "${fieldName}" with value: "${fieldValue}"`);
-            }
-          } catch (selectError) {
-            console.error(`Failed to fill field "${fieldName}" with value "${fieldValue}" (${fieldType}):`, selectError.message);
-          }
-        } 
-        
-        else {
-          console.warn(`Field "${fieldName}" NOT FOUND in PDF form`);
+        if (type === 'text') {
+          // Set text field value for the PDF form, defaulting to empty string if value is undefined
+          pdfField.setText(fieldValue || '');
+          console.log(`Filled TEXT field: "${fieldName}" with value: "${fieldValue || ''}"`);
+        }
+        // Set radio button value for the PDF form, only if fieldValue is not undefined or empty 
+        else if (type === 'radio') {
+          
+          pdfField.select(value || '');
+          console.log(`Filled RADIO field: "${fieldName}" with value: "${fieldValue || ''}"`);
         }
       } catch (error) {
-        console.error(`Critical error accessing field "${fieldName}":`, error.message);
+        console.error(`Failed to fill field "${fieldName}":`, error.message);
       }
-    });
-
-    console.log(`\n📊 Summary: ${filledCount} filled, ${notFoundCount} not found, ${errorCount} errors`);
-    form.updateFieldAppearances(); 
-    // Save the PDF
-    const generatedPdfBytes = await pdfDoc.save();
-    
-    const iframe = document.getElementById("pdf-iframe");
-
-    // Revoke old blob URL to prevent memory leaks
-    if (iframe.dataset.blobUrl) {
-      URL.revokeObjectURL(iframe.dataset.blobUrl);
-      console.log("Revoked old blob URL");
+    } else {
+      console.warn(`Field "${fieldName}" NOT FOUND in PDF form`);
     }
+  });
 
-    // Create blob and display in iframe
-    const blob = new Blob([generatedPdfBytes], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
+  formData.updateFieldAppearances(fonts);
 
-    // Store the new blob URL for next time
-    iframe.dataset.blobUrl = url;
+  // Save the PDF
+  const generatedPdfBytes = await pdfDoc.save();
+  // get iframe element
 
-    iframe.src = url;
-    iframe.classList.remove("is-hidden");
-    console.log("New PDF blob URL created and iframe updated");
+  // Create blob and display in iframe
+  const blob = new Blob([generatedPdfBytes], { type: "application/pdf" });
+  const blobUrl = URL.createObjectURL(blob);
 
-    console.log("PDF generated and displayed successfully");
-  } catch (error) {
-    console.error("Error generating PDF:", error);
-    alert("Failed to generate PDF. Check the console for details.");
+  const iframe = document.getElementById("pdf-iframe");
+
+  // Revoke old blob URL to prevent memory leaks
+  if (iframe) {
+    if (iframe.src.startsWith('blob:')) {
+      URL.revokeObjectURL(iframe.src);
+    }
+    iframe.src = blobUrl;
+    if (iframe.classList.contains('is-hidden')) {
+      iframe.classList.remove('is-hidden');
+    }
+    console.log('PDF rendered to iframe successfully.');
+  } else {
+    // Fallback if iframe is missing
+    window.open(blobUrl, '_blank');
+    console.warn('Iframe not found; opened PDF in new tab.');
   }
+
+  return blob;
 }

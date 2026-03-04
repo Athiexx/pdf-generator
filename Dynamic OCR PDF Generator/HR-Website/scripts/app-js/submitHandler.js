@@ -9,11 +9,11 @@ export async function submitHandler() {
         event.preventDefault();
 
         // retrieve PDFdata from the form and then pass it onto the generate PDF function
-        const PDFdata = extractFormData(formElement);
-        console.log("Extracted PDF Data:", PDFdata);
+        const pdfData = await extractFormData(formElement);
+        console.log("Extracted PDF Data:", pdfData);
 
         // Generate and display the PDF in the iframe
-        await generatePDF(PDFdata);
+        await generatePDF(pdfData);
         console.log("Form submitted and PDF generated");
     });
 }

@@ -38,14 +38,14 @@ Text Box - DATE (Type of Action Requested)
 Text Box - DATE (For Bureau of Personnel Use Only)
 Text Box - TITLE CODE NUMBER (Personnel Action)
 Text Box - TITLE CODE NUMBER (Type of Action)
-Check Box - Present Status (Personnel Action)
-Check Box - Type of Action Requested
-Check Box - Requested Status
 Text Box - OTHER REMARKS
-Check Box - Funding Source
 Text Box - PAYROLL DIST NUMBER
-Check Box - T/O Change?
-Check Box - Increase to Pay-As-You-Go?
 Text Box - BUDGET CODE AND LINE NUMBER
 Text Box - COB DATE
 Text Box - SEPARATION DATE (COB)
+Radio Button Group - TYPE OF ACTION REQUESTED
+Radio Button Group - REQUESTED STATUS
+Radio Button Group - INDICATE FUNDING SOURCE
+Radio Button Group - PRESENT STATUS
+Radio Button Group - INCREASE TO PAY-AS-YOU-GO
+Radio Button Group - T/O CHANGE

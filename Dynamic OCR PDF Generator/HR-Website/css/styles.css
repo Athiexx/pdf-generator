@@ -13,6 +13,8 @@
   gap: 5px; /* Space between the label and its input */
 }
 .padding-class {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1.25rem;
     margin-top:1.5rem;
 }

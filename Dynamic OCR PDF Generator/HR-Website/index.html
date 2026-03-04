@@ -19,6 +19,7 @@
  Keep it as a radio or regular button(?)-->
 
 <!-- Radio buttons seem to fit better. As there are radio buttons here. Now, how do you extract radio buttons from a form?-->
+
 <body>
     <div id="dsnyLogo-container" class="dsnyLogo">
         <img src="./images/New_York_City_Department_of_Sanitation_logo.svg"
@@ -91,22 +92,22 @@
                 <div id="checkbox-field-personnel-action" class="padding-class">
                     <div>
                         <input type="radio" id="civil-service-present-status"
-                            name="Check Box - Present Status (Personnel Action)">
+                            name="Radio Button Group - PRESENT STATUS" value="Civil Service">
                         <label for="civil-service-present-status">Civil Service</label>
                     </div>
                     <div>
-                        <input type="radio" id="provisional-present-status"
-                            name="Check Box - Present Status (Personnel Action)">
+                        <input type="radio" id="provisional-present-status" name="Radio Button Group - PRESENT STATUS"
+                            value="Provisional">
                         <label for="provisional-present-status">Provisional</label>
                     </div>
                     <div>
-                        <input type="radio" id="non-comp-present-status"
-                            name="Check Box - Present Status (Personnel Action)">
+                        <input type="radio" id="non-comp-present-status" name="Radio Button Group - PRESENT STATUS"
+                            value="Non-Comp">
                         <label for="non-comp-present-status">Non-Competitive</label>
                     </div>
                     <div>
-                        <input type="radio" id="other-present-status"
-                            name="Check Box - Present Status (Personnel Action)">
+                        <input type="radio" id="other-present-status" name="Radio Button Group - PRESENT STATUS"
+                            value="Other">
                         <label for="other-present-status">Other</label>
                     </div>
 
@@ -224,61 +225,73 @@
                     <h3><u>Type of Action Requested</u></h3>
                     <div id="type-of-action-requested">
                         <div>
-                            <input type="radio" id="new-appointment" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="new-appointment"
+                                name="Radio Button Group - TYPE OF ACTION REQUESTED" value="New Appointment">
                             <label for="new-appointment">New Appointment</label>
                         </div>
                         <div>
-                            <input type="radio" id="promotion" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="promotion" name="Radio Button Group - TYPE OF ACTION REQUESTED"
+                                value="Promotion">
                             <label for="promotion">Promotion</label>
                         </div>
                         <div>
-                            <input type="radio" id="other" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="other" name="Radio Button Group - TYPE OF ACTION REQUESTED"
+                                value="Other">
                             <label for="other">Other</label>
                         </div>
                         <div>
-                            <input type="radio" id="merit-increase" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="merit-increase" name="Radio Button Group - TYPE OF ACTION REQUESTED"
+                                value="Merit Increase">
                             <label for="merit-increase">Merit Increase</label>
                         </div>
                         <div>
-                            <input type="radio" id="separation" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="separation" name="Radio Button Group - TYPE OF ACTION REQUESTED"
+                                value="Separation">
                             <label for="separation">Separation</label>
                         </div>
                         <div>
-                            <input type="radio" id="leave-without-pay" name="Check Box - Type of Action Requested">
+                            <input type="radio" id="leave-without-pay"
+                                name="Radio Button Group - TYPE OF ACTION REQUESTED" value="Leave Without Pay">
                             <label for="leave-without-pay">Leave Without Pay</label>
                         </div>
                     </div>
                     <h3><u>Requested Status</u></h3>
                     <div id="requested-status">
                         <div>
-                            <input type="radio" id="civil-service-requested-status" name="Check Box - Requested Status">
+                            <input type="radio" id="civil-service-requested-status"
+                                name="Radio Button Group - REQUESTED STATUS" value="Civil Service">
                             <label for="civil-service-requested-status">Civil Service</label>
                         </div>
                         <div>
-                            <input type="radio" id="provisional-requested-status" name="Check Box - Requested Status">
+                            <input type="radio" id="provisional-requested-status"
+                                name="Radio Button Group - REQUESTED STATUS" value="Provisional">
                             <label for="provisional-requested-status">Provisional</label>
                         </div>
                         <div>
-                            <input type="radio" id="non-comp-requested-status" name="Check Box - Requested Status">
+                            <input type="radio" id="non-comp-requested-status"
+                                name="Radio Button Group - REQUESTED STATUS" value="Non-Comp">
                             <label for="non-comp-requested-status">Non-Competitive</label>
                         </div>
                         <div>
-                            <input type="radio" id="other-requested-status" name="Check Box - Requested Status">
+                            <input type="radio" id="other-requested-status" name="Radio Button Group - REQUESTED STATUS"
+                                value="Other">
                             <label for="other-requested-status">Other</label>
                         </div>
                     </div>
-                    <h3><u>Funding Source</u></h3>
-                    <div id="funding-source">
+                    <h3><u>Indicate Funding Source</u></h3>
+                    <div id="indicate-funding-source">
                         <div>
-                            <input type="radio" id="tax-levy" name="Check Box - Funding Source">
+                            <input type="radio" id="tax-levy" name="Radio Button Group - INDICATE FUNDING SOURCE"
+                                value="Tax Levy">
                             <label for="tax-levy">Tax Levy</label>
                         </div>
                         <div>
-                            <input type="radio" id="IFA" name="Check Box - Funding Source">
+                            <input type="radio" id="IFA" name="Radio Button Group - INDICATE FUNDING SOURCE"
+                                value="IFA">
                             <label for="IFA">IFA</label>
                         </div>
                         <div>
-                            <input type="radio" id="CD" name="Check Box - Funding Source">
+                            <input type="radio" id="CD" name="Radio Button Group - INDICATE FUNDING SOURCE" value="CD">
                             <label for="CD">CD</label>
                         </div>
                     </div>
@@ -361,11 +374,12 @@
                     <h3><u>T/O Change</u></h3>
                     <div id="T/O-change">
                         <div>
-                            <input type="radio" id="T/O-change-yes" name="Check Box - T/O Change?">
+                            <input type="radio" id="T/O-change-yes" name="Radio Button Group - T/O CHANGE"
+                                value="Yes">
                             <label for="T/O-change-yes">Yes</label>
                         </div>
                         <div>
-                            <input type="radio" id="T/O-change-no" name="Check Box - T/O Change?">
+                            <input type="radio" id="T/O-change-no" name="Radio Button Group - T/O CHANGE" value="No">
                             <label for="T/O-change-no">No</label>
                         </div>
                     </div>
@@ -373,12 +387,12 @@
                     <div id="increase-pay-as-you-go">
                         <div>
                             <input type="radio" id="increase-pay-as-you-go-yes"
-                                name="Check Box - Increase to Pay-As-You-Go?">
+                                name="Radio Button Group - INCREASE TO PAY-AS-YOU-GO" value="Yes">
                             <label for="increase-pay-as-you-go-yes">Yes</label>
                         </div>
                         <div>
                             <input type="radio" id="increase-pay-as-you-go-no"
-                                name="Check Box - Increase to Pay-As-You-Go?">
+                                name="Radio Button Group - INCREASE TO PAY-AS-YOU-GO" value="No">
                             <label for="increase-pay-as-you-go-no">No</label>
                         </div>
                     </div>
