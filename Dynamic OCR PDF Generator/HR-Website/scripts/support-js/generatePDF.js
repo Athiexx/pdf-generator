@@ -51,6 +51,7 @@ export async function generatePDF(pdfData) {
         if (type === 'text') {
           // Set text field value for the PDF form, defaulting to empty string if value is undefined
           pdfField.setText(fieldValue || '');
+          pdfField.setFontSize(12);
           console.log(`Filled TEXT field: "${fieldName}" with value: "${fieldValue || ''}"`);
         }
         // Set radio button value for the PDF form, only if fieldValue is not undefined or empty 
@@ -66,8 +67,8 @@ export async function generatePDF(pdfData) {
       console.warn(`Field "${fieldName}" NOT FOUND in PDF form`);
     }
   });
-
-  formData.updateFieldAppearances(fonts);
+  formData.updateFieldAppearances(fonts); // Update field appearances to apply the embedded font
+  formData.flatten(); // Flatten the form to make filled values permanent and non-editable
 
   // Save the PDF
   const generatedPdfBytes = await pdfDoc.save();

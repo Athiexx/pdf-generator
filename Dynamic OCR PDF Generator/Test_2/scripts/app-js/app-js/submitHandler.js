@@ -59,8 +59,6 @@ export async function submitHandler() {
                 }
             });
         });
-        // FIX THIS ERROR. IT HAS SOME WEIRD ERR_NAME_NOT_RESOLVED ERROR.
-        // CHECK THE URL. IT MAY BE WRONG OR SOMETHING.
             await updateAlfrescoMetadata(formObject, uploadedNodeId);
     });
 }
