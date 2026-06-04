@@ -59,7 +59,7 @@ export async function submitHandler() {
                 }
             });
         });
-            await updateAlfrescoMetadata(formObject, uploadedNodeId);
+        await updateAlfrescoMetadata(formObject, uploadedNodeId);
     });
 }
 

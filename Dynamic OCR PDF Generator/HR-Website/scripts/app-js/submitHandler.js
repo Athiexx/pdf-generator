@@ -22,7 +22,8 @@ export async function submitHandler() {
         uploadData.append("filedata", pdfBlob, uniqueName);
         uploadData.append("nodeType", "cm:content");
         uploadData.append("overwrite", "true");
-
+        
+        // ** THIS IS CRUCIAL FOR LINKING THE PDF TO THE FORM DATA IN THE XML MODEL. **
         // Upload Node ID will be used later when we create an XMl model.
         // This Node ID will be used to update the metadata of the file we just uploaded, so we can link it to the form data.
         return new Promise((resolve, reject) => {
